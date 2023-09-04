@@ -23,6 +23,10 @@ function App() {
     })
   }
 
+  const handlePage = (index) => {
+    setPage(index)
+  }
+
   const prevPage = () => {
     setPage((oldPage) => {
       let prevPage = oldPage - 1
@@ -55,7 +59,7 @@ function App() {
                 <button
                   key={index}
                   className={`page-btn ${index === page ? "active-btn" : null}`}
-                  onClick={() => {}}
+                  onClick={()=>handlePage(index)}
                 >
                   {index + 1}
                 </button>
